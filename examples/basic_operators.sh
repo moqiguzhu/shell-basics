@@ -24,12 +24,17 @@ x_str=$y_str
 echo "x_str should be 20 "$x_str
 
 # equality
-equal=$[ $x_str == $y_str ]
-echo "equal should be true "$equal
+if [ $x_str == $y_str ]
+then
+    echo "x_str == y_str"
+fi
 
-# not equality
-no_equal=$[ $x != $y ]
-echo "no_equal should be true "$no_equal
+if [ $x_str = $y_str ]
+then
+    echo "x_str = y_str"
+fi
+
+# return value of $[ some expression ] is meaningless
 
 
 ##############################
